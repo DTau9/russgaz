@@ -1,0 +1,327 @@
+:root {
+	--header__logo-height: 53px;
+}
+
+@font-face {
+	font-family: "Akrobat";
+	src: url("../fonts/Akrobatsemibold.woff2") format('woff2'), url("../fonts/Akrobatsemibold.woff") format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Akrobat";
+	src: url("../fonts/Akrobatextrabold.woff2") format('woff2'), url("../fonts/Akrobatbold.woff") format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Akrobat";
+	src: url("../fonts/Akrobatextrabold.woff2") format('woff2'), url("../fonts/Akrobatextrabold.woff") format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+body {
+	color: #1D1D1D;
+	font: 12px/18px "Roboto", sans-serif;
+	letter-spacing: 0.02em;
+	margin: 0 auto;
+	padding: 0;
+	width: 100vw;
+	overflow: hidden;
+}
+
+/* отключаем скролл боди */
+
+.scroller {
+	overflow: scroll;
+	height: 100vh;
+}
+
+.header {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.header__logo {
+	background-image: linear-gradient(0deg, #00A7FA 13.6%, #007CD7 74.08%);
+	display: inline-block;
+	box-sizing: border-box;
+	height: var(--header__logo-height);
+	width: 100vw;
+	vertical-align: middle;
+	padding: 12px 50px 13px 17px;
+	font: bold 20px/24px "Akrobat", sans-serif;
+	top: 0;
+	z-index: 1;
+}
+
+.header__logo-img, .header__logo-img-white {
+	width: 32px;
+	height: 27px;
+}
+
+.header__logo-img {
+	display: none;
+}
+
+.header__logo-name {
+	color: white;
+	display: inline-block;
+	margin-left: 6px;
+	line-height: 24px;
+	letter-spacing: 0.02em;
+	vertical-align: bottom;
+}
+
+/*menu*/
+
+.menu-toggler-checkbox {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	align-items: center;
+	height: 10px;
+	width: 18px;
+	z-index: 100;
+}
+
+.menu-toggler-checkbox>span, .menu-toggler-checkbox>span::before, .menu-toggler-checkbox>span::after {
+	background-color: white;
+	cursor: pointer;
+	display: block;
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	transition: 0.1s;
+}
+
+.menu-toggler-checkbox>span::before {
+	content: "";
+	top: -4px;
+}
+
+.menu-toggler-checkbox>span::after {
+	content: "";
+	top: 4px;
+}
+
+#menu-toggler {
+	display: none;
+}
+
+/* отключаем прокрутку сщдержимого страницы */
+
+#menu-toggler:checked~.scroller {
+	overflow: hidden;
+}
+
+/* анимация бургера */
+
+#menu-toggler:checked~.scroller .menu-toggler-checkbox>span {
+	transform: rotate(45deg);
+}
+
+#menu-toggler:checked~.scroller .menu-toggler-checkbox>span::before {
+	top: 0;
+	transform: rotate(0);
+}
+
+#menu-toggler:checked~.scroller .menu-toggler-checkbox>span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+#menu-toggler:checked~.scroller .menu-toggler-checkbox {
+	position: fixed;
+}
+
+#menu-toggler:checked~.scroller .header__logo {
+	background: linear-gradient(0deg, #00A7FA 13.6%, #007CD7 50.08%);
+	position: fixed;
+}
+
+/* открытие меню при клике бургера */
+
+#menu-toggler:checked~.scroller .nav-menu-mobile {
+	display: block;
+}
+
+.nav-menu-mobile {
+	background-color: #fff;
+	box-sizing: border-box;
+	display: none;
+	overflow-y: scroll;
+	padding: 17px 0 0 17px;
+	position: fixed;
+	bottom: 0;
+	top: var(--header__logo-height);
+	width: 100vw;
+}
+
+.time-phone__time {
+	display: block;
+	font: 10px/12px "Roboto", sans-serif;
+	margin-bottom: 4px;
+}
+
+.time-phone__phone {
+	color: #000;
+	display: inline-block;
+	font: 800 14px/17px "Akrobat", sans-serif;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav-menu__list, .nav-menu__sublist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-menu__list-mobile {
+	margin-top: 24px;
+}
+
+.nav-menu__item {
+	position: relative;
+	padding-right: 35px;
+	letter-spacing: 0.02em;
+}
+
+.nav-menu__item a {
+	color: black;
+	display: block;
+	font: bold 18px/22px "Akrobat", sans-serif;
+	padding: 16px 0;
+	overflow-wrap: break-word;
+	text-decoration: none;
+}
+
+.nav-menu__item a:active {
+	color: #0281DC;
+}
+
+.nav-menu__item a:visited {
+	color: black;
+}
+
+.nav-menu__sublist {
+	display: none;
+}
+
+.nav-menu__item-sublist a {
+	font: 600 16px/19px "Akrobat", sans-serif;
+	padding: 8px 0;
+}
+
+.nav-menu__item-sublist a:active {
+	color: #0281DC;
+}
+
+.nav-menu__item-sublist a:visited {
+	color: black;
+}
+
+.nav-menu__tick {
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	transform: rotate(45deg);
+	display: block;
+	position: absolute;
+	right: 17px;
+	top: 22px;
+	height: 9px;
+	width: 8px;
+}
+
+#nav-menu__tick-checkbox-balloon, #nav-menu__tick-checkbox-gas, #nav-menu__tick-checkbox-other {
+	display: none;
+}
+
+#nav-menu__tick-checkbox-balloon:checked~.nav-menu__sublist-balloon, #nav-menu__tick-checkbox-gas:checked~.nav-menu__sublist-gas, #nav-menu__tick-checkbox-other:checked~.nav-menu__sublist-other {
+	display: block;
+}
+
+#nav-menu__tick-checkbox-balloon:checked~.nav-menu__tick, #nav-menu__tick-checkbox-gas:checked~.nav-menu__tick, #nav-menu__tick-checkbox-other:checked~.nav-menu__tick {
+	transform: rotate(-135deg);
+}
+
+.price-btn {
+	color: white;
+	display: block;
+	font: 800 16px "Akrobat", sans-serif;
+	line-height: 53px;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 0.05em;
+	margin: 24px 0;
+	width: 288px;
+	border-radius: 4px;
+	background: linear-gradient(169.9deg, #017DD8 23.22%, #01A8FB 95.44%);
+}
+
+/* end menu */
+
+.main {
+	padding-top: 16px;
+}
+
+.breadcrumbs {
+	color: #646464;
+}
+
+.contacts__title {
+	font: 800 20px/24px "Akrobat", sans-serif;
+}
+
+.contacts__subtitle {
+	font: 800 14px/17px "Akrobat", sans-serif;
+	width: 157px;
+}
+
+.breadcrumbs, .contacts__adress, .contacts__title {
+	padding: 0 8px;
+}
+
+.contacts__phone, .contacts__mail, .contacts__work-hours {
+	box-sizing: border-box;
+	display: flex;
+	padding: 0 8px 45px;
+}
+
+.contacts__map {
+	margin-bottom: -5px;
+	width: 100%;
+}
+
+/* ! footer */
+
+.footer {
+	background-color: #282828;
+	color: white;
+	display: flex;
+	align-items: center;
+	padding: 16px 0 17px 12px;
+}
+
+.footer-aside-left, .footer-aside-right {
+	display: inline-block;
+	width: 41vw;
+}
+
+.time-phone__phone-footer {
+	color: white;
+}
+
+.email, .view-map-mobile {
+	display: block;
+	font: 10px/12px "Roboto", sans-serif;
+	text-decoration: none;
+	color: white;
+}
