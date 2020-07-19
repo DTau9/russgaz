@@ -555,7 +555,6 @@ body {
 		font: 16px/23px "Roboto", sans-serif;
 	}
 	.header {
-		background-position: center;
 		height: initial;
 		padding-bottom: 135px;
 	}
@@ -777,6 +776,8 @@ body {
 		margin-right: 56px;
 	}
 }
+
+/* ! MEDIA 1920PX */
 
 @media (min-width: 1920px) {
 	:root {
