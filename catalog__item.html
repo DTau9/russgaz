@@ -4,96 +4,154 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Руссгаз</title>
 	<link rel="stylesheet" href="styles/catalog__item-style.css">
 </head>
 
 <body>
 	<input type="checkbox" name="burger-checkbox" id="menu-toggler">
+	<section class="sidebar-catalog">
+		<div class="sidebar-catalog__logo">
+			<a href="#"><img class="sidebar-catalog__logo-img" src="img/logo.png"><span
+					class="sidebar-catalog__logo-name">РУССГАЗ</span></a>
+		</div>
+		<ul class="catalog-list">
+			<li><a class="catalog-list__item" href="#">Технические газы</a>
+				<ul class="catalog-list__sublist">
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Азот газообразный</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Азот жидкий</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Азот ОСЧ</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Углекислота пищевая</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Сжатый воздух</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Гелий</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Ацителен</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Пропан</a></li>
+				</ul>
+			</li>
+			<li><a class="catalog-list__item" href="#">Газовые баллоны</a>
+				<ul class="catalog-list__sublist">
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Кислородный баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Углекислородный баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Азотный баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Аргоновы баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Ацителеновый баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Гелиевый баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Водородный баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Пропановый баллон</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Баллон сжатый воздух</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Баллон сварочная смесь</a></li>
+				</ul>
+			</li>
+			<li><a class="catalog-list__item" href="#">Прочее</a>
+				<ul class="catalog-list__sublist">
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">ТО газовых баллонов</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Сосуд Дьюара</a></li>
+					<li><a class="catalog-list__item catalog-list__item-sublist" href="#">Криоцилиндры</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
 	<div class="scroller">
 		<header class="header">
-			<!--burger-->
-			<label class="menu-toggler-checkbox" for="menu-toggler">
-				<span></span>
-			</label>
-			<div class="header__logo">
-				<a href="catalog.html"><img class="header__logo-img" src="img/logo.png"><img class="header__logo-img-white"
-						src="img/logo-white.png"><span class="header__logo-name">РУССГАЗ</span></a>
-			</div>
-			<div class="nav-menu nav-menu-mobile">
-				<div class="time-phone"><span class=" time-phone__time">C 9:00- 17:00</span>
-					<a class="time-phone__phone" href="tel:+7 845 232 30 50">8 (8452) 32-30-50, </a>
-					<a class="time-phone__phone" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+
+			<div class="header-menu-wrapper">
+				<div class="header__logo">
+					<a href="#"><img class="header__logo-img" src="img/logo.png"><img class="header__logo-img-white"
+							src="img/logo-white.png"><span class="header__logo-name">РУССГАЗ</span></a>
 				</div>
-				<ul class="nav-menu__list nav-menu__list-mobile">
-					<li class="nav-menu__item"><a href="#">О компании</a></li>
-					<li class="nav-menu__item"><a href="#">Технические газы</a>
-						<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-gas">
-						<label class="nav-menu__tick" for="nav-menu__tick-checkbox-gas">
-						</label>
-						<ul class="nav-menu__sublist nav-menu__sublist-gas">
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот газообразный</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот жидкий</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот ОСЧ</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Углекислота пищевая</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Сжатый воздух</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Гелий</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Ацителен</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Пропан</a></li>
-						</ul>
-					</li>
-					<li class="nav-menu__item"><a href="#">Газовые баллоны</a>
-						<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-balloon">
-						<label class="nav-menu__tick" for="nav-menu__tick-checkbox-balloon">
-						</label>
-						<ul class="nav-menu__sublist nav-menu__sublist-balloon">
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Кислородный баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Углекислородный баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азотный баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Аргоновы баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Ацителеновый баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Гелиевый баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Водородный баллон</a></li>
-							<li class=" nav-menu__ite nav-menu__itemm-sublist"><a href="#">Пропановый баллон</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Баллон сжатый воздух</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Баллон сварочная смесь</a></li>
-						</ul>
-					</li>
-					<li class="nav-menu__item"><a href="#">Прочее</a>
-						<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-other">
-						<label class="nav-menu__tick" for="nav-menu__tick-checkbox-other">
-						</label>
-						<ul class="nav-menu__sublist nav-menu__sublist-other">
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">ТО газовых баллонов</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Сосуд Дьюара</a></li>
-							<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Криоцилиндры</a></li>
-						</ul>
-					</li>
-					<li class="nav-menu__item"><a href="#">Доставка</a></li>
-					<li class="nav-menu__item"><a href="#">Контакты</a></li>
-				</ul>
-				<a class="price-btn" href="#">Смотреть прайс</a>
+				<!--меню-->
+				<div class="nav-menu">
+					<div class="time-phone"><span class="time-phone__time time-phone__time-menu">C 9:00- 17:00</span>
+						<a class="time-phone__phone time-phone__phone-menu" href="tel:+7 845 232 30 50">8 (8452) 32-30-50 </a>
+						<a class="time-phone__phone time-phone__phone-menu" href="tel:+7 845 232 30 50"> , 8 (8452) 32-30-50</a>
+					</div>
+					<ul class="nav-menu__list">
+						<li class="nav-menu__item"><a href="#">О компании</a></li>
+						<li class="nav-menu__item nav-menu__item-laptop"><a href="#">Каталог</a></li>
+						<li class="nav-menu__item nav-menu__item-mobile"><a href="#">Технические газы</a>
+							<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-gas">
+							<label class="nav-menu__tick" for="nav-menu__tick-checkbox-gas">
+							</label>
+							<ul class="nav-menu__sublist nav-menu__sublist-gas">
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот газообразный</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот жидкий</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азот ОСЧ</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Углекислота пищевая</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Сжатый воздух</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Гелий</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Ацителен</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Пропан</a></li>
+							</ul>
+						</li>
+						<li class="nav-menu__item nav-menu__item-mobile"><a href="#">Газовые баллоны</a>
+							<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-balloon">
+							<label class="nav-menu__tick" for="nav-menu__tick-checkbox-balloon">
+							</label>
+							<ul class="nav-menu__sublist nav-menu__sublist-balloon">
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Кислородный баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Углекислородный баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Азотный баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Аргоновы баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Ацителеновый баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Гелиевый баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Водородный баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Пропановый баллон</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Баллон сжатый воздух</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Баллон сварочная смесь</a></li>
+							</ul>
+						</li>
+						<li class="nav-menu__item nav-menu__item-mobile"><a href="#">Прочее</a>
+							<input type="checkbox" name="tick-checkbox" id="nav-menu__tick-checkbox-other">
+							<label class="nav-menu__tick" for="nav-menu__tick-checkbox-other">
+							</label>
+							<ul class="nav-menu__sublist nav-menu__sublist-other">
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">ТО газовых баллонов</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Сосуд Дьюара</a></li>
+								<li class="nav-menu__item nav-menu__item-sublist"><a href="#">Криоцилиндры</a></li>
+							</ul>
+						</li>
+						<li class="nav-menu__item"><a href="#">Доставка</a></li>
+						<li class="nav-menu__item"><a href="contacts.html">Контакты</a></li>
+					</ul>
+					<a class="btn price-btn" href="#">Смотреть прайс</a>
+					<div class="nav-menu__feedback-group">
+						<a class="nav-menu__email" href="mailto:mail@example.com">info@russ-gas.ru</a>
+						<a class="nav-menu__map" href="#">Смотреть на карте</a>
+					</div>
+				</div>
+				<!--burger-->
+				<label class="menu-toggler-checkbox" for="menu-toggler">
+					<span></span>
+				</label>
 			</div>
 		</header>
 
 		<main class="main">
-			<div class="breadcrumbs">Каталог <span>&rsaquo;</span> Азот жидкий <span>&rsaquo;</span> Товар1</div>
-
+			<a class="backtocatalog" href="">Перейти к списку всех товаров</a>
+			<h2 class="title namecategory">Технические газы</h2>
+			<div class="breadcrumbs"><a href="#">Каталог</a> <span>&nbsp; &rsaquo; &nbsp;</span><a href="#">Азот жидкий</a>
+				<span>&nbsp; &rsaquo;
+					&nbsp;</span><a href="#">Товар1</a></div>
 			<div class="product-card">
-				<div class="title product-card__title-mobile">
+				<div class="product-card__title-mobile">
 					<h2 class="title">Азот жидкий</h2>
-					<p class="title">300 <span>&#8381;</span></p>
+					<div>
+						<span class="title">300 <span>&nbsp; &#8381;</span></span><br>
+						<span class="product-card__text">цена за литр</span>
+					</div>
 				</div>
-
 				<div class="product-card__photo">
 					<div class="product-card__label catalog__label-blue">Азот</div>
 					<img class="product-card__img" src="img/balloon-blue.png" alt="фото товара">
 				</div>
-
 				<div class="product-card__info">
 					<div class="product-card__title">
-						<h2 class="title">Азот жидкий</h2>
-						<p class="title">300 <span>&#8381;</span></p>
+						<h2 class="title title-product-card">Азот жидкий</h2>
+						<div>
+							<div class="title">300<span>&nbsp;&#8381;</span></div>
+							<div class="product-card__text">цена за литр</div>
+						</div>
 					</div>
 					<div class="product-card__volume">
 						<h3 class="product-card__subtitle">Объём</h3>
@@ -121,55 +179,71 @@
 					</div>
 				</div>
 			</div>
-			<a class="catalog-btn" href="catalog.html">Смотреть каталог</a>
+			<a class="btn catalog-btn" href="catalog.html">Смотреть каталог</a>
 			<h2 class="title title-catalog">С этим товаром покупают</h2>
 			<p class="text-catalog">Вы можете приобрести в нашем магазине или заказать на сайте любое количество необходимых
-				газов по доступным ценам.
-			</p>
+				газов по доступным ценам.</p>
 			<div class="catalog">
-				<!--catalog-mob 1 line-->
+				<!-- ! 1 -->
 				<div class="catalog__item">
-					<div class="catalog__photo ">
+					<div class="catalog__photo">
 						<img class="catalog__item-photo" src="img/balloon-blue.png" alt="фото товара">
 					</div>
 					<div class="title catalog__name">Кислород технический</div>
 					<div class="catalog__volume">8.3 кг/40 л</div>
-					<div class="catalog__cost">300 <span>&#8381;</span></div>
+					<div class="catalog__cost">300 <span>₽</span></div>
 				</div>
+				<!-- ! 2 -->
 				<div class="catalog__item">
-					<div class="catalog__photo ">
+					<div class="catalog__photo">
 						<img class="catalog__item-photo" src="img/balloon-green.png" alt="фото товара">
 					</div>
 					<div class="title catalog__name">Кислород технический</div>
 					<div class="catalog__volume">8.3 кг/40 л</div>
-					<div class="catalog__cost">300 <span>&#8381;</span></div>
+					<div class="catalog__cost">300 <span>₽</span></div>
 				</div>
-				<!--catalog-mob 2 line-->
+				<!-- ! 3 -->
+				<div class="catalog__item">
+					<div class="catalog__photo">
+						<img class="catalog__item-photo" src="img/balloon-blue.png" alt="фото товара">
+					</div>
+					<div class="title catalog__name">Кислород технический</div>
+					<div class="catalog__volume">8.3 кг/40 л</div>
+					<div class="catalog__cost">300 <span> ₽</span></div>
+				</div>
+				<!-- ! 4 -->
 				<div class="catalog__item">
 					<div class="catalog__photo ">
 						<img class="catalog__item-photo" src="img/balloon-blue.png" alt="фото товара">
 					</div>
 					<div class="title catalog__name">Кислород технический</div>
 					<div class="catalog__volume">8.3 кг/40 л</div>
-					<div class="catalog__cost">300 <span>&#8381;</span></div>
-				</div>
-				<div class="catalog__item">
-					<div class="catalog__photo ">
-						<img class="catalog__item-photo" src="img/balloon-blue.png" alt="фото товара">
-					</div>
-					<div class="title catalog__name">Кислород технический</div>
-					<div class="catalog__volume">8.3 кг/40 л</div>
-					<div class="catalog__cost">300 <span>&#8381;</span></div>
+					<div class="catalog__cost">300 <span>₽</span></div>
 				</div>
 			</div>
 		</main>
+
 		<footer class="footer">
-			<div class="footer-aside-left"><span class=" time-phone__time">C 9:00- 17:00</span>
-				<a class="time-phone__phone time-phone__phone-footer" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+			<div class="footer__address">
+				<h3 class="footer__title">Адрес:</h3>
+				<p>410062, г. Саратов, посёлок городского типа Строителей б/н (район ВСО), литер АА1</p>
 			</div>
-			<div class="footer-aside-right">
-				<a class="email" href="mailto:mail@example.com">Email: info@russ-gas.ru</a>
-				<a class="view-map-mobile" href="#">Смотреть на карте</a>
+			<div class="footer__feedback">
+				<h3 class="footer__title">Контакты</h3>
+				<div class="footer__feedback-group">
+					<div class="time-phone__time time-phone__time-footer">C 9:00- 17:00</div>
+					<a class="time-phone__phone time-phone__phone-footer" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+					<a class="time-phone__phone time-phone__phone-footer" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+				</div>
+				<div class="footer__feedback-group">
+					<a class="time-phone__phone time-phone__phone-footer" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+					<a class="time-phone__phone time-phone__phone-footer" href="tel:+7 845 232 30 50">8 (8452) 32-30-50</a>
+				</div>
+				<div class="footer__feedback-group">
+					<a class="footer__email" href="mailto:mail@example.com">Email: info@russ-gas.ru</a>
+					<a class="footer__skype" href="skype:russ-gas.ru?userinfo">Скайп: russ-gas.ru</a>
+					<a class="footer__map" href="#">Смотреть на карте</a>
+				</div>
 			</div>
 		</footer>
 	</div>
