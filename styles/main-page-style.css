@@ -1,13 +1,11 @@
 :root {
-	--width-html                      : 100%;
 	--header__logo-height             : 53px;
 	--title                           : 800 20px/24px "Akrobat", sans-serif;
-	--sidebar-catalog-width           : 0px;
-	--catalog-padding                 : 3.75vw;
+	--catalog-padding                 : 3.75%;
 	--catalog-item-count-in-row       : 2;
 	--catalog-item-count-margin-in-row: calc(var(--catalog-item-count-in-row) - 1);
-	--catalog-item-margin-left        : 3.125vw;
-	--catalog-item-width              : calc(((100vw - var(--sidebar-catalog-width)) - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
+	--catalog-item-margin-left        : 3.125%;
+	--catalog-item-width              : calc((100% - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
 }
 
 @font-face {
@@ -369,6 +367,10 @@ a {
 	background-color: #140D8C;
 }
 
+.main {
+	overflow: hidden;
+}
+
 /* ! promo */
 
 .promo-wrapper {
@@ -435,18 +437,16 @@ a {
 	margin-left   : calc(var(--catalog-item-margin-left) * -1);
 	letter-spacing: 0;
 	padding       : 0 var(--catalog-padding);
+	width         : 100%;
 }
 
 .catalog__item {
+	color        : #000;
 	display      : inline-block;
 	min-height   : 179px;
 	margin-bottom: 32px;
 	margin-left  : var(--catalog-item-margin-left);
 	width        : var(--catalog-item-width);
-}
-
-.catalog__item:visited {
-	color: black;
 }
 
 .catalog__photo {
@@ -726,15 +726,20 @@ a {
 	}
 
 	.promo-wrapper {
-		overflow-x: visible;
+		margin-bottom: 99px;
+		overflow-x   : visible;
+	}
+
+	.promo-wrapper::after {
+		display: none;
 	}
 
 	.promo {
 		background-color: #23205E;
 		box-shadow      : 0px 55px 41px -43px #243D70;
 		justify-content : space-around;
-		margin-bottom   : 100px;
 		padding         : 41px 0 44px;
+		overflow        : unset;
 		width           : initial;
 	}
 
@@ -882,7 +887,6 @@ a {
 @media (min-width: 1920px) {
 	:root {
 		--title                    : 800 36px/43px "Akrobat", sans-serif;
-		--sidebar-catalog-width    : 425px;
 		--catalog-item-count-in-row: 4;
 	}
 
@@ -898,7 +902,7 @@ a {
 		flex-shrink: 0;
 		display    : block;
 		padding    : 38px 38px;
-		width      : var(--sidebar-catalog-width);
+		width      : 425px;
 	}
 
 	.sidebar-catalog__logo {
@@ -1093,15 +1097,20 @@ a {
 	}
 
 	.promo-wrapper {
-		overflow-x: visible;
+		margin-bottom: 99px;
+		overflow-x   : visible;
+	}
+
+	.promo-wrapper::after {
+		display: none;
 	}
 
 	.promo {
 		background-color: #23205E;
 		box-shadow      : 0px 55px 41px -43px #243D70;
 		justify-content : space-between;
-		margin-bottom   : 101px;
 		padding         : 39px 61px 32px;
+		overflow        : unset;
 		width           : initial;
 	}
 
