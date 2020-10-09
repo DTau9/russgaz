@@ -1,4 +1,5 @@
 :root {
+	--width-html                      : 100%;
 	--header__logo-height             : 53px;
 	--title                           : 800 20px/24px "Akrobat", sans-serif;
 	--sidebar-catalog-width           : 0px;
@@ -356,11 +357,12 @@ a {
 	border-radius   : initial;
 	color           : white;
 	font-size       : 16px;
+	left            : 0;
 	line-height     : 53px;
-	width           : 100vw;
 	background-color: #23205E;
 	position        : absolute;
 	bottom          : 0;
+	right           : 0;
 }
 
 .catalog-btn:hover {
@@ -370,14 +372,27 @@ a {
 /* ! promo */
 
 .promo-wrapper {
-	overflow-x: scroll;
+	margin-bottom: 36px;
+	overflow     : hidden;
+	position     : relative;
+}
+
+/* прячем горизонтальный скролл */
+.promo-wrapper::after {
+	background-color: #fff;
+	bottom          : 0;
+	left            : 0;
+	right           : 0;
+	display         : block;
+	content         : "";
+	height          : 30px;
+	position        : absolute;
 }
 
 .promo {
-	display      : flex;
-	margin-bottom: 36px;
-	padding      : 17px 0 6px;
-	width        : fit-content;
+	display   : flex;
+	overflow-x: scroll;
+	padding   : 17px 0 30px;
 }
 
 .promo__item {
