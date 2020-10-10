@@ -5,8 +5,9 @@
 	--catalog-item-count-in-row       : 2;
 	--catalog-item-count-margin-in-row: calc(var(--catalog-item-count-in-row) - 1);
 	--catalog-item-margin-left        : 3.125vw;
+	--sidebar-catalog-width           : 0px;
 	/* ширина скроллбара = 17px */
-	--catalog-item-width              : calc((100vw - 17px - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
+	--catalog-item-width              : calc((100vw - 17px - (var(--sidebar-catalog-width)) - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
 }
 
 @font-face {
@@ -888,6 +889,7 @@ a {
 	:root {
 		--title                    : 800 36px/43px "Akrobat", sans-serif;
 		--catalog-item-count-in-row: 4;
+		--sidebar-catalog-width    : 425px;
 	}
 
 	body {
@@ -902,7 +904,7 @@ a {
 		flex-shrink: 0;
 		display    : block;
 		padding    : 38px 38px;
-		width      : 425px;
+		width      : var(--sidebar-catalog-width);
 	}
 
 	.sidebar-catalog__logo {
