@@ -1,13 +1,14 @@
 :root {
-	--header__logo-height             : 53px;
-	--title                           : 800 20px/24px "Akrobat", sans-serif;
-	--catalog-padding                 : 3.75vw;
-	--catalog-item-count-in-row       : 2;
-	--catalog-item-count-margin-in-row: calc(var(--catalog-item-count-in-row) - 1);
-	--catalog-item-margin-left        : 3.125vw;
-	--sidebar-catalog-width           : 0px;
+	--header__logo-height                 : 53px;
+	--title                               : 800 20px/24px "Akrobat", sans-serif;
+	--catalog-padding                     : 3.75vw;
+	--catalog-item-count-in-row           : 2;
+	--catalog-item-count-margin-in-row    : calc(var(--catalog-item-count-in-row) - 1);
+	--catalog-item-margin-left            : 3.125vw;
+	--sidebar-catalog-width               : 0px;
+	--catalog-item-width-without-scrollbar: calc((100vw - (var(--sidebar-catalog-width)) - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
 	/* ширина скроллбара = 17px */
-	--catalog-item-width              : calc((100vw - 17px - (var(--sidebar-catalog-width)) - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
+	--catalog-item-width-with-scrollbar   : calc((100vw - 17px - (var(--sidebar-catalog-width)) - (var(--catalog-padding) * 2) - (var(--catalog-item-margin-left) * var(--catalog-item-count-margin-in-row))) / var(--catalog-item-count-in-row));
 }
 
 @font-face {
@@ -436,8 +437,8 @@ a {
 
 .catalog {
 	font-size     : 0;
-	margin-left   : calc(var(--catalog-item-margin-left) * -1);
 	letter-spacing: 0;
+	margin-left   : calc(var(--catalog-item-margin-left) * -1);
 	padding       : 0 var(--catalog-padding);
 }
 
@@ -447,18 +448,32 @@ a {
 	min-height   : 179px;
 	margin-bottom: 32px;
 	margin-left  : var(--catalog-item-margin-left);
-	width        : var(--catalog-item-width);
+}
+
+.catalog__item_width-without-scrollbar {
+	width: var(--catalog-item-width-without-scrollbar);
+}
+
+.catalog__item_width-with-scrollbar {
+	width: var(--catalog-item-width-with-scrollbar);
 }
 
 .catalog__photo {
 	background-color: #EDF2F5;
 	border-radius   : 4px 4px 0px 0px;
-	height          : calc(var(--catalog-item-width) * 0.71);
 	max-height      : 250px;
 	position        : relative;
 	overflow        : hidden;
 	text-align      : center;
 	width           : 100%;
+}
+
+.catalog__photo_height-without-scrollbar {
+	height: calc(var(--catalog-item-width-without-scrollbar) * 0.71);
+}
+
+.catalog__photo_height-with-scrollbar {
+	height: calc(var(--catalog-item-width-with-scrollbar) * 0.71);
 }
 
 .catalog__label {
