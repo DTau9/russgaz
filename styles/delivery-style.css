@@ -34,6 +34,10 @@ body {
 	padding: 0;
 }
 
+::-webkit-scrollbar {
+	width: 0;
+}
+
 .sidebar-catalog {
 	display: none;
 }
