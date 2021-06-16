@@ -30,6 +30,10 @@ body {
 	overflow: hidden;
 }
 
+::-webkit-scrollbar {
+	width: 0;
+}
+
 .sidebar-catalog {
 	display: none;
 }
